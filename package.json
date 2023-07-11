@@ -15,3 +15,8 @@
     "dependencia-2": "versión"
   }
 }
+"dependencies": {
+  "gatsby": "versión-de-gatsby",
+  "react": "versión-de-react",
+  "react-dom": "versión-de-react-dom"
+}
