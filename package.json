@@ -1,0 +1,17 @@
+{
+  "name": "nombre-del-proyecto",
+  "version": "1.0.0",
+  "description": "Descripción del proyecto",
+  "main": "index.html",
+  "scripts": {
+    "start": "node index.js",
+    "build": "comando-de-construcción-del-proyecto",
+    "deploy": "comando-de-despliegue"
+  },
+  "author": "Tu Nombre",
+  "license": "MIT",
+  "dependencies": {
+    "dependencia-1": "versión",
+    "dependencia-2": "versión"
+  }
+}
